@@ -1,0 +1,72 @@
+a.link-cta {
+  --color: #222;
+  --color-inverse: #fff;
+
+  position: relative;
+  display: block;
+  padding: .6em 3em .6em 1em;
+  font-family: Arial;
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--color);
+  box-shadow: inset 0 0 0 .125em var(--color);
+  border-radius: .2rem;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    transition: all .5s ease-in-out;
+  }
+
+  &::before {
+    top: 50%;
+    right: 1em;
+    width: 1em;
+    height: 1em;
+    transform-origin: 50% 50%;
+    transform: translate(0, -0.5em) rotate(45deg);
+    box-shadow: inset -0.125em .125em 0 0 var(--color);
+    border-radius: 0 .15em 0 0;
+  }
+
+  &::after {
+    top: 50%;
+    right: 1em;
+    width: 1.3em;
+    height: .125em;
+    transform: translate(0, -0.0625em);
+    background-color: var(--color);
+  }
+
+  &:hover::before {
+    transform: translate(0.5em, -0.5em) rotate(45deg);
+  }
+
+  &:hover::after {
+    transform: translate(0.5em, -0.0625em);
+  }
+
+  &--primary {
+    background-color: var(--color);
+    color: var(--color-inverse);
+
+    &::before {
+      box-shadow: inset -0.125em .125em 0 0 var(--color-inverse);
+    }
+
+    &::after {
+      background-color: var(--color-inverse);
+    }
+  }
+
+  &--large {
+    font-size: 1.5rem;
+  }
+
+  &--small {
+    font-size: 1rem;
+  }
+}
