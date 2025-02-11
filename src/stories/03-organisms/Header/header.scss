@@ -1,0 +1,6 @@
+.header {
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  }
+}
