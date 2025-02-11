@@ -2,7 +2,7 @@ import React from 'react';
 
 import './link-cta-1.scss';
 
-export interface LinkCta1Props {
+type LinkCta1Props = {
   /** Is this the principal call to action on the page? */
   primary?: boolean;
   /** How large should the button be? */
@@ -14,7 +14,7 @@ export interface LinkCta1Props {
 }
 
 /** Primary UI component for user interaction */
-export const LinkCta1 = ({
+const LinkCta1 = ({
   primary = false,
   size = 'medium',
   label,
@@ -30,3 +30,5 @@ export const LinkCta1 = ({
     </a>
   );
 };
+
+export default LinkCta1;

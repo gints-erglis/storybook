@@ -1,0 +1,9 @@
+.card {
+  --color-border: #eee;
+  --color-background: #fff;
+
+  padding: 20px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  box-shadow: rgba(0, 0, 0, .15) 0px 5px 15px 0px;
+}
