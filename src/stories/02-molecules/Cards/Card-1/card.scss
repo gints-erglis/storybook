@@ -2,8 +2,19 @@
   --color-border: #eee;
   --color-background: #fff;
 
-  padding: 20px;
+  padding: 2rem;
   background: var(--color-background);
   border: 1px solid var(--color-border);
   box-shadow: rgba(0, 0, 0, .15) 0px 5px 15px 0px;
+
+  h2 {
+    margin: 0;
+  }
+
+  &--aligned {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+    gap: 0;
+  }
 }

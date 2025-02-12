@@ -12,16 +12,19 @@ const HomePage = () => {
         <p>This is the example page.</p>
         <Grid className="grid-auto-fit">
           <Card
+            mode="aligned"
             heading="Card title"
             linkLabel="Read more"
             description={Texts.paragraph1}
           />
           <Card
+            mode="aligned"
             heading="Card title"
             linkLabel="Read more"
             description={Texts.paragraph2}
           />
           <Card
+            mode="aligned"
             heading="Card title"
             linkLabel="Read more"
             description={Texts.paragraph3}
