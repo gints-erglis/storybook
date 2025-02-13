@@ -49,6 +49,27 @@ a.link-cta {
     transform: translate(0.5em, -0.0625em);
   }
 
+  &--icon-left {
+    padding: .6em 1em .6em 3em;
+
+    &::before {
+      left: 1em;
+      transform: translate(0, -0.5em) rotate(-135deg);
+    }
+
+    &:hover::before {
+      transform: translate(-0.5em, -0.5em) rotate(-135deg);
+    }
+
+    &::after {
+      left: 1em;
+    }
+
+    &:hover::after {
+      transform: translate(-0.5em, -0.0625em);
+    }
+  }
+
   &--primary {
     background-color: var(--color);
     color: var(--color-inverse);
