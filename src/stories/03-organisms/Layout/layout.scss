@@ -1,0 +1,12 @@
+.layout {
+  &--sidebar {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 15rem 1fr;
+    gap: 1rem;
+  }
+
+  &__sidebar {
+    background-color: var(--color-sidebar-background, #f5f5f5);
+  }
+}

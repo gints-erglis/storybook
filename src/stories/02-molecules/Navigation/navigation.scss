@@ -1,9 +1,14 @@
+@use "@/assets/styles/variables.scss" as *;
+
 nav > ul {
   display: flex;
   flex-wrap: wrap;
   gap: 5rem 2rem;
-
   list-style: none;
+
+  ul {
+    list-style: none;
+  }
 
   li {
     a {
@@ -13,6 +18,210 @@ nav > ul {
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+// Dropdown menu
+$transition: 100ms all 10ms ease-out;
+
+.menu-main {
+  $screen-md: 48rem !default;
+  --color-dropdown-background: #e2e2e2;
+
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+
+  @media (min-width: $screen-md) {
+    flex-flow: row nowrap;
+  }
+
+  > li {
+    padding: 0.5rem 0;
+  }
+
+  li {
+    a {
+      line-height: 2rem;
+      display: block;
+      padding: 0 .5em;
+    }
+  }
+  li.menu-item--expanded {
+    position: relative;
+
+    button {
+      height: 2rem;
+      padding: 0 .5em;
+      display: inline-flex;
+      align-items: center;
+      background-color: transparent;
+      border: none;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    // dropdown
+    > ul.menu {
+      position: absolute;
+      margin: .5rem 0;
+      padding: .5rem;
+      min-width: 15ch;
+      transition: $transition;
+      visibility: hidden;
+      background-color: #454545;
+      border-radius: 3px;
+      opacity: 0;
+
+      @media (min-width: $screen-md) {
+        margin: 0;
+        top: calc(100%);
+        left: 50%;
+        background-color: var(--color-dropdown-background);
+        transform: rotateX(-90deg) translateX(-50%);
+        transform-origin: top center;
+        box-shadow: 0 0.15em 0.25em rgba(black, 0.25);
+        z-index: 9;
+      }
+
+      li > a {
+
+        &:hover {
+          background-color: rgba(255,255,255, 0.15);
+        }
+
+        &:focus {
+          outline: 1px solid #eee;
+          outline-offset: -2px;
+        }
+      }
+
+      &[aria-hidden="false"] {
+        opacity: 1;
+        visibility: visible;
+
+        &:after {
+          opacity: 1;
+        }
+
+        @media (max-width: $screen-md) {
+          position: relative;
+        }
+
+        @media (min-width: $screen-md) {
+          transform: rotateX(0) translateX(-50%);
+        }
+      }
+    }
+
+    & > ul.menu:after {
+      content: "";
+      border: 0.5rem solid transparent;
+      border-bottom-color: var(--color-dropdown-background);
+      position: absolute;
+      top: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      will-change: opacity;
+      opacity: 0;
+
+      @media (max-width: $screen-md) {
+        border-bottom-color: #454545;
+        left: 1rem;
+      }
+    }
+
+    // opened submenu
+    &[data-expanded="true"] {
+      > ul {
+        opacity: 1;
+        visibility: visible;
+
+        @media (max-width: $screen-md) {
+          position: relative;
+        }
+
+        a {
+          opacity: 1;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+        @media (min-width: $screen-md) {
+          transform: rotateX(0) translateX(-50%);
+        }
+      }
+
+      @media (max-width: $screen-md) {
+        button {
+          border-top-color: var(--color-dropdown-background);
+        }
+      }
+    }
+  }
+}
+
+// Main menu
+.header__content {
+  $screen-md: 48rem !default;
+  $color-background-mobile-menu: #eee !default;
+
+  nav {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-background-mobile-menu;
+
+    @media (min-width: $screen-md) {
+      visibility: visible !important;
+      position: relative;
+      background-color: transparent;
+    }
+
+    & > ul {
+      padding-left: 1rem;
+    }
+  }
+}
+
+// Menu toggle
+.menu-toggle {
+  $screen-md: 48rem !default;
+  $background-color: #454545;
+
+  width: 40px;
+  background: none;
+  border: none;
+
+  &:after,
+  &:before,
+  &__icon {
+    background-color: $background-color;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 3px;
+    margin: 6px 0;
+    transition: all .2s ease-in-out;
+  }
+
+  @media (min-width: $screen-md) {
+    display: none;
+  }
+
+  &[aria-expanded="true"] {
+    &:before {
+      transform: translateY(9px) rotate(135deg);
+    }
+    &:after {
+      transform: translateY(-9px) rotate(-135deg);
+    }
+    .menu-toggle__icon {
+      transform: scale(0);
     }
   }
 }
