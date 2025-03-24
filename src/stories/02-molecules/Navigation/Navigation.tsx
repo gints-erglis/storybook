@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 
 import './navigation.scss';
-import Menu, { a11yMegamenu } from './navigation.js';
+// import Menu, { a11yMegamenu } from './navigation.js';
 
 const Navigation = () => {
-  useEffect(() => {
-
-    Menu();
-    a11yMegamenu();
-  }, []);
+  // useEffect(() => {
+  //
+  //   Menu();
+  //   a11yMegamenu();
+  // }, []);
   return (
   <nav id="main-menu">
     <ul className="menu menu-main">

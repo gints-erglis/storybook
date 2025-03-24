@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../01-atoms/Logo";
-import Navigation from "../../02-molecules/Navigation/Navigation.tsx";
+import Navigation from "../../02-molecules/Navigation/Navigation";
 
 import './header.scss';
 
