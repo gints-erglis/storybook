@@ -1,6 +1,14 @@
 .header {
+  position: relative;
+
   &__content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: 1rem;
+
+    nav {
+      flex: 1;
+    }
   }
 }

@@ -11,6 +11,9 @@ const Header = ({ ...props }) => (
         <Logo/>
       </div>
       <Navigation/>
+      <button className="menu-toggle" aria-expanded="false" aria-controls="menu-items" aria-label="Toggle navigation">
+        <span className="menu-toggle__icon"></span>
+      </button>
     </div>
   </header>
 );
