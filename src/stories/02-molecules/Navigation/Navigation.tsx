@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import { Chevron } from "../../01-atoms/arrows/chevron/Chevron";
 import './navigation.scss';
 import Menu, { a11yMegamenu } from './menu.ts';
 
@@ -13,12 +13,16 @@ const Navigation = () => {
     <nav id="main-menu">
       <ul className="menu menu-main">
         <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/">About</a></li>
         <li className="menu-item--expanded">
-          <button aria-expanded="false" aria-haspopup="true">Has submenu</button>
+          <a href="/">User area</a>
+          <button aria-expanded="false" aria-haspopup="true">
+            <Chevron direction='bottom'/>
+            <span className="visually-hidden">Open submenu: User area</span>
+          </button>
           <ul className="menu" aria-hidden="true">
-            <li><a href="#">Item 1</a></li>
-            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Settings</a></li>
           </ul>
         </li>
       </ul>

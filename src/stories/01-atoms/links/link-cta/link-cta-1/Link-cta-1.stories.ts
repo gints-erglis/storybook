@@ -11,7 +11,7 @@ const meta = {
     layout: 'centered',
     docs: {
       source: {
-        type: 'dynamic', // Dynamically generates the rendered HTML or JSX
+        type: 'code', // Dynamically generates the rendered HTML or JSX
       },
     },
   },

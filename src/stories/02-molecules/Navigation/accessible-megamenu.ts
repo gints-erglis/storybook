@@ -16,7 +16,7 @@ export default class AccessibleMegaMenu {
 
   bindEvents() {
     this.menuItems.forEach(item => {
-      const button = item.querySelector('button, a');
+      const button = item.querySelector('button');
       const submenu = item.querySelector('ul');
 
       if (!button || !submenu) return;
@@ -55,8 +55,8 @@ export default class AccessibleMegaMenu {
         // Let Tab work naturally
         break;
       case 'Escape':
-        this.closeSubmenu(item.querySelector('button, a'), submenu);
-        item.querySelector('button, a')?.focus();
+        this.closeSubmenu(item.querySelector('button'), submenu);
+        item.querySelector('button')?.focus();
         break;
     }
   }
@@ -84,7 +84,7 @@ export default class AccessibleMegaMenu {
 
   closeAllSubmenus() {
     this.menuItems.forEach(item => {
-      const button = item.querySelector('button, a');
+      const button = item.querySelector('button');
       const submenu = item.querySelector('ul');
 
       if (button && submenu) {
@@ -95,7 +95,7 @@ export default class AccessibleMegaMenu {
   }
 
   focusFirstChild(submenu) {
-    const firstItem = submenu.querySelector('a, button');
+    const firstItem = submenu.querySelector('button');
     firstItem?.focus();
   }
 }
