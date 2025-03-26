@@ -15,5 +15,9 @@ const config: StorybookConfig = {
     options: {},
   },
   staticDirs: ['../public'],
+  viteFinal: (config) => {
+    config.base = '/storybook/'; // for GH Pages
+    return config;
+  },
 };
 export default config;
