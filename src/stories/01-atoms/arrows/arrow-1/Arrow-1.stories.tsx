@@ -24,7 +24,7 @@ const meta = {
         <>
           <DocsPage />
           <h3>CSS Code</h3>
-          <Source language="css" code={cssCode} />
+          <Source language="css" dark="true" code={cssCode} />
         </>
       ),
     },
