@@ -9,7 +9,7 @@ const generateHtmlCode = (args) => {
 };
 
 const meta = {
-  title: 'Atoms/Arrows/Chevron',
+  title: '00-Atoms/Arrows/Chevron',
   component: Chevron,
   parameters: {
     layout: 'centered',

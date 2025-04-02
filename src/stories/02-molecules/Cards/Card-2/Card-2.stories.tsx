@@ -1,16 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { DocsPage, Source } from '@storybook/blocks';
-import { Arrow1 } from './Arrow-1';
-import cssCode from "./arrow-1.scss?raw";
+import Card2 from './Card-2';
+import cssCode from "./card-2.scss?raw";
+import { Texts } from "../../../00-constants/Texts";
 
 // Static HTML template
 const generateHtmlCode = (args) => {
-  return `<span class="arrow arrow--${args.size} arrow--${args.direction}"></span>`;
+  return `<div class="card card--${args.direction}"></div>`;
 };
 
 const meta = {
-  title: '00-Atoms/Arrows/Arrow1',
-  component: Arrow1,
+  title: '01-Molecules/Cards/Card-2',
+  component: Card2,
   parameters: {
     layout: 'centered',
     docs: {
@@ -33,16 +34,15 @@ const meta = {
   argTypes: {
     color: { control: 'color' },
   },
-} satisfies Meta<typeof Arrow1>;
+} satisfies Meta<typeof Card2>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Top: Story = {
   args: {
-    direction: 'top',
-    size: 'medium',
-    color: '#666',
+    direction: 'vertical',
+    description: Texts.paragraph1,
   },
 };
 
