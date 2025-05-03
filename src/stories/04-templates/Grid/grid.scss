@@ -3,6 +3,16 @@
   /* Instead of this */
   /* grid-template-columns: repeat(3, 1fr); */
   grid-template-columns:
-    repeat(auto-fit, minmax(min(25ch, 100%), 1fr));
+    repeat(auto-fit, minmax(min(30ch, 100%), 1fr));
   gap: 2rem;
+
+  &.sb-small {
+    grid-template-columns:
+    repeat(auto-fit, minmax(min(20ch, 100%), 1fr));
+  }
+
+  &.sb-large {
+    grid-template-columns:
+    repeat(auto-fit, minmax(min(40ch, 100%), 1fr));
+  }
 }
