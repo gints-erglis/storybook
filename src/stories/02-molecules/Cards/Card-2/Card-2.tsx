@@ -1,6 +1,5 @@
 import React from 'react';
 import LinkCta1 from "../../../01-atoms/links/link-cta/link-cta-1/Link-cta-1";
-import image1 from '../../../../assets/imgages/image-1.jpg';
 
 import './card-2.scss';
 
@@ -25,7 +24,7 @@ const Card2 = ({
       {...props}
     >
       <div className="card__image">
-        <img src={image1} />
+        <img src="/images/image-1.jpg" alt="Description" />
       </div>
       <div className="card__content">
         <h2>{heading}</h2>
