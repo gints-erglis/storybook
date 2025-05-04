@@ -1,4 +1,4 @@
-import{j as e}from"./jsx-runtime-BjgbQsUx.js";import{G as m,C as a}from"./Card-1-CMCk0_Dj.js";import{a4 as l,a5 as p}from"./index-pdSx1ECB.js";import{T as r}from"./Texts-nW5b_30r.js";import"./index-D2MAbzvX.js";import"./Link-cta-1-CEhuWD-g.js";import"./iframe-BYue7cQg.js";import"../sb-preview/runtime.js";import"./index-RigO-4kf.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-BIm0odtm.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";const g=`.grid-auto-fit {
+import{j as e}from"./jsx-runtime-BjgbQsUx.js";import{G as m,C as a}from"./Card-1-CMCk0_Dj.js";import{a4 as l,a5 as p}from"./index-D02HGfX7.js";import{T as r}from"./Texts-nW5b_30r.js";import"./index-D2MAbzvX.js";import"./Link-cta-1-CEhuWD-g.js";import"./iframe-CwnmViXT.js";import"../sb-preview/runtime.js";import"./index-RigO-4kf.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-BIm0odtm.js";import"./index-CHGET4sZ.js";import"./index-DrFu-skq.js";const g=`.grid-auto-fit {
   display: grid;
   /* Instead of this */
   /* grid-template-columns: repeat(3, 1fr); */
