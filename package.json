@@ -9,8 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6009",
+    "predeploy": "touch storybook-static/.nojekyll && npm run build-storybook",
     "build-storybook": "storybook build",
-    "deploy": "gh-pages -d storybook-static"
+    "deploy": "gh-pages -d storybook-static --dotfiles"
   },
   "homepage": "https://gints-erglis.github.io/storybook/",
   "dependencies": {

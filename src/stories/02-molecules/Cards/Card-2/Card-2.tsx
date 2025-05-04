@@ -24,7 +24,7 @@ const Card2 = ({
       {...props}
     >
       <div className="card__image">
-        <img src="/images/image-1.jpg" alt="Description" />
+        <img src={`${import.meta.env.BASE_URL}images/image-1.jpg`} alt="..." />
       </div>
       <div className="card__content">
         <h2>{heading}</h2>
