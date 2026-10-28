@@ -1,0 +1,28 @@
+/* Design tokens: the whole visual language in a handful of values. */
+:root {
+  /* light-dark() resolves where a token is used, so any container
+     with color-scheme: dark flips everything inside it. */
+  color-scheme: light;
+
+  --ink: light-dark(#1a1a1a, #f2f2f2);
+  --muted: light-dark(#555, #b3b3b3);
+  --paper: light-dark(#fff, #141414);
+  --line: light-dark(#d9d9d9, #3a3a3a);
+  --accent: light-dark(#535bf2, #9ba0ff);
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+
+  --radius: 0.5rem;
+  --focus: 2px solid var(--accent);
+  --ease: 200ms ease-out;
+}
+
+/* Inverted band: put any component inside, no component changes needed. */
+.scheme-dark {
+  color-scheme: dark;
+  background: var(--paper);
+  color: var(--ink);
+  padding: var(--space-3);
+}

@@ -1,0 +1,50 @@
+import { Meta, Canvas, Source } from '@storybook/blocks';
+import * as AccordionStories from './Accordion.stories';
+import markup from './accordion.html?raw';
+import css from './accordion.css?raw';
+import tokens from '../../00-constants/tokens.css?raw';
+
+<Meta of={AccordionStories} />
+
+# Accordion
+
+Native `<details>` and `<summary>`. No JavaScript.
+
+<Canvas of={AccordionStories.Accordion} />
+
+### In a dark band
+
+The same markup inside `<section class="scheme-dark">`. Tokens use `light-dark()`, so nothing in the component changes.
+
+<Canvas of={AccordionStories.DarkBand} />
+
+## Code
+
+<Source language="html" code={markup} />
+<Source language="css" code={css} />
+
+Tokens used by the component:
+
+<Source language="css" code={tokens} />
+
+## Why it is built this way
+
+- `<details>` gives open/close, keyboard support and the expanded state to screen readers for free. A `div` with JS would have to rebuild all of that by hand.
+- A shared `name` makes the group exclusive (opening one closes the others). Remove `name` if several panels may be open at once.
+- The chevron uses `currentColor` borders instead of an icon, so it follows hover and Windows high contrast mode.
+- The animation (`::details-content` + `interpolate-size`) is an enhancement. Older browsers simply open without motion, and `prefers-reduced-motion` turns it off.
+- Content stays in the DOM, so in-page search (Ctrl+F) can find text and open the panel.
+
+## Accessibility checklist
+
+| Check | How | Status |
+| --- | --- | --- |
+| Keyboard: Tab reaches each summary, Enter and Space toggle | Keyboard only, no mouse | ☐ |
+| Focus is clearly visible | Tab through, `:focus-visible` outline | ☐ |
+| Screen reader announces “collapsed / expanded” | VoiceOver (Safari), NVDA (Firefox) | ☐ |
+| No axe violations | Storybook a11y panel | ☐ |
+| Readable in forced colors | Windows high contrast, or DevTools → Rendering → forced-colors | ☐ |
+| No motion with reduced motion | DevTools → Rendering → prefers-reduced-motion: reduce | ☐ |
+| Text contrast at least 4.5:1 | Light: 17.4 / 7.5 / 5.1, dark: 16.5 / 8.8 / 7.8 (ink / muted / accent, calculated) | ☐ |
+| Dark band: no axe violations, focus ring visible | Storybook a11y panel on the Dark Band story | ☐ |
+| Works at 200% zoom and 320px width | Browser zoom, responsive viewport | ☐ |
