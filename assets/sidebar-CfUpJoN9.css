@@ -1,0 +1,1 @@
+.sidebar{display:flex;flex-wrap:wrap;gap:var(--space-3)}.sidebar__aside{flex:1 1 15rem;padding:var(--space-2);border-radius:var(--radius);background:var(--surface)}.sidebar__main{flex:999 1 0;min-inline-size:60%}.sidebar>*>:first-child{margin-block-start:0}

@@ -1,0 +1,5 @@
+import{i as a,h as m}from"./tokens-BayYMT7K.js";import{d as p}from"./navigation-BRQETj7m.js";import{p as i}from"./page-CddPnTW6.js";import{g as c}from"./grid-DjnXB9vC.js";/* empty css                   */import"./jsx-runtime-C8prxwi0.js";import"./index-DkGvG02X.js";import"./_commonjsHelpers-CqkleIqs.js";import"./header-CpuDs9UV.js";/* empty css               */import"./footer-CJMD3tkF.js";import"./card-B8mi7PqA.js";const l=a(`<h1>Welcome</h1>
+<p>A small, curated set of components built with HTML and CSS first.</p>
+<h2>Principles</h2>
+<!-- @grid -->
+<p><a class="link-arrow" href="#">See all components</a></p>`,{grid:c(3)}),o=i(l),_={title:"04-Pages/Home",render:m(o,p),parameters:{layout:"fullscreen",docs:{source:{code:o,language:"html"}}}},r={};var e,t,s;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:"{}",...(s=(t=r.parameters)==null?void 0:t.docs)==null?void 0:s.source}}};const b=["Home"];export{r as Home,b as __namedExportsOrder,_ as default};

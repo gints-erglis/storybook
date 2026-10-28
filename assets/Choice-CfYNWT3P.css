@@ -1,0 +1,1 @@
+.choice{display:flex;align-items:center;gap:var(--space-1);inline-size:fit-content;min-block-size:2rem;cursor:pointer}.choice input{flex:none;inline-size:1.25em;block-size:1.25em;margin:0;accent-color:var(--accent);cursor:inherit}.choice input:focus-visible{outline:var(--focus);outline-offset:2px}.choice:has(:disabled){color:var(--muted);cursor:not-allowed}
